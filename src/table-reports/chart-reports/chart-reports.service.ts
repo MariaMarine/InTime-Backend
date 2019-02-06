@@ -60,7 +60,7 @@ export class ChartReportsService {
         }
         const datesFound = await this.startDateRepository.find({where : {chartReport: chartToUpdate}});
 
-        await this.startDateRepository.delete(datesFound);
+        await this.startDateRepository.remove(datesFound);
         chartToUpdate.origin = updateChartReportDTO.origin;
         chartToUpdate.destination = updateChartReportDTO.destination;
         chartToUpdate.name = updateChartReportDTO.name;
@@ -88,8 +88,8 @@ export class ChartReportsService {
             throw new Error(`Chart not found!`);
         }
         const datesFound = await this.startDateRepository.find({where : {chartReport: chartToDelete}});
-        await this.startDateRepository.delete(datesFound);
-        await this.chartRepository.delete(chartReportId);
+        await this.startDateRepository.remove(datesFound);
+        await this.chartRepository.remove(chartToDelete);
 
         return JSON.stringify(`Chart report with id "${chartReportId}" was successfully deleted.`);
     }
