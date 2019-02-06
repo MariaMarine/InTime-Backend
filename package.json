@@ -17,8 +17,6 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "ts-node": "^7.0.1",
-    "tsconfig-paths": "^3.5.0",
     "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate",
     "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run"
   },
@@ -51,6 +49,8 @@
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.5.0",
     "typeorm": "^0.2.9",
     "typescript": "^3.0.1",
     "uuid": "^3.3.2"
