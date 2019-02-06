@@ -8,6 +8,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(cors());
   app.useStaticAssets(join(__dirname, '..', 'public'));
-  await app.listen(app.get(ConfigService).port);
+  await app.listen(process.env.PORT || app.get(ConfigService).port);
 }
 bootstrap();
