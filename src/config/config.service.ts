@@ -31,10 +31,10 @@ export class ConfigService {
       JWT_SECRET: Joi.string().required(),
       JWT_EXPIRE: Joi.number().default(3600 * 24 * 7),
       DB_TYPE: Joi.string().default('mysql'),
-      DB_HOST: Joi.string().default('localhost'),
+      DB_HOST: Joi.string().default('bpyll5mgtrsgcj65ekye-mysql.services.clever-cloud.com'),
       DB_PORT: Joi.number().default(3306),
-      DB_USERNAME: Joi.string().default('root'),
-      DB_PASSWORD: Joi.string().default('123'),
+      DB_USERNAME: Joi.string().default('uzcc5awtawlmpmduq2a0'),
+      DB_PASSWORD: Joi.string().default('si9jFPApPk8kWBChnoZR'),
       DB_DATABASE_NAME: Joi.string().required(),
     });
 
