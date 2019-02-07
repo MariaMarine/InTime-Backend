@@ -21,9 +21,10 @@ export class MailService {
         to: [mail],
         subject: `Account created!`,
         text: 'Account created',
-        html: `<b>InTime account created for user ${mail}. 
-        Please contact your admin for your pasword.
-        You can then change it at http://localhost:4200/profile.</p>`,
+        html: `<b>InTime account created for user ${mail}.
+        You can access your new InTime account at http://intime-frontend.herokuapp.com/
+        with your email address and the password privided by your admin.
+        </p>`,
     };
 
      transporter.sendMail(mailOptions, (error, info) => {
